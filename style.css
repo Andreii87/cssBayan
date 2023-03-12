@@ -102,3 +102,40 @@ input[type="radio"]:checked + label .item-meme__content {
 input[type="radio"]:checked + label .item-meme__header svg {
   transform: rotate(180deg);
 }
+
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 25px;
+    margin: 10px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .item-meme:active .item-meme__header {
+    background-color: #f9f2a6;
+  }
+
+  .item-meme:hover .item-meme__header svg {
+    transform: rotate(180deg);
+  }
+
+  .item-meme:hover .item-meme__content {
+    max-height: 100vh;
+  }
+
+  .item-meme:hover {
+    background-color: rgb(206, 197, 184);
+  }
+
+  .item-meme:hover .item-meme__header {
+    border-color: black;
+  }
+}
