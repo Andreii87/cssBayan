@@ -1,0 +1,141 @@
+@import "./normalize.css";
+h1 {
+  font-size: 50px;
+  margin: 50px 250px 0px 250px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h6 {
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Roboto";
+  background: url(./img/gif.gif) repeat;
+}
+
+.meme {
+  z-index: 1000;
+  background-color: white;
+  margin: 0 auto;
+  max-width: 750px;
+  border-radius: 10px;
+}
+
+.meme__container {
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.meme__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.meme__item {
+  cursor: pointer;
+}
+
+.item-meme {
+  border-radius: 10px;
+  transition: 0.4s ease all;
+  width: 100%;
+}
+
+.item-meme__header {
+  border-radius: 10px;
+  background-color: white;
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #faf294;
+}
+
+.item-meme__content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: 1s ease all;
+}
+
+.item-meme__image {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  max-width: 20px;
+  max-height: 20px;
+  transition: 0.5s ease all;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+label {
+  width: 100%;
+}
+
+img {
+  max-width: 50%;
+}
+
+input[type="radio"]:checked + label .item-meme__content {
+  max-height: 100vh;
+}
+
+input[type="radio"]:checked + label .item-meme__header svg {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 25px;
+    margin: 10px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .item-meme:active .item-meme__header {
+    background-color: #f9f2a6;
+  }
+
+  .item-meme:hover .item-meme__header svg {
+    transform: rotate(180deg);
+  }
+
+  .item-meme:hover .item-meme__content {
+    max-height: 100vh;
+  }
+
+  .item-meme:hover {
+    background-color: rgb(206, 197, 184);
+  }
+
+  .item-meme:hover .item-meme__header {
+    border-color: black;
+  }
+}
